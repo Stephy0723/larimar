@@ -5,11 +5,13 @@ import Link from "next/link"
 import styles from "./Products.module.css"
 
 export default function Products() {
+  // Prefijo dinámico para GitHub Pages
+  const prefix = process.env.NODE_ENV === 'production' ? '/larimar' : '';
 
   const images = [
-    "/products/larimar1.jpg",
-    "/products/larimar2.jpg",
-    "/products/larimar3.jpg"
+    `${prefix}/products/larimar1.jpg`,
+    `${prefix}/products/larimar2.jpg`,
+    `${prefix}/products/larimar3.jpg`
   ]
 
   const variants = [
@@ -24,13 +26,12 @@ export default function Products() {
 
   return (
     <section className={styles.wrapper}>
-
       <div className={styles.container}>
 
         {/* LEFT SIDE */}
         <div className={styles.left}>
-
           <div className={styles.mainImage}>
+            {/* Usamos la imagen con el prefijo ya incluido en el array */}
             <img src={activeImage} alt="Larimar" />
           </div>
 
@@ -41,18 +42,15 @@ export default function Products() {
                 src={img}
                 onClick={() => setActiveImage(img)}
                 className={activeImage === img ? styles.activeThumb : ""}
+                alt={`Thumbnail ${i}`}
               />
             ))}
           </div>
-
         </div>
 
         {/* RIGHT SIDE */}
         <div className={styles.right}>
-
-          <h1 className={styles.title}>
-            Ocean Luxury Set
-          </h1>
+          <h1 className={styles.title}>Ocean Luxury Set</h1>
 
           <div className={styles.rating}>
             ★ ★ ★ ★ ☆ <span>(4 Reviews)</span>
@@ -67,33 +65,29 @@ export default function Products() {
             create a refined Caribbean expression of elegance.
           </p>
 
-<div className={styles.variantSection}>
-  <label>Select Piece</label>
+          <div className={styles.variantSection}>
+            <label>Select Piece</label>
+            <div className={styles.variants}>
+              {variants.map((item, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelected(item)}
+                  className={`${styles.variantBtn} ${
+                    selected.name === item.name ? styles.activeVariant : ""
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+          </div>
 
-  <div className={styles.variants}>
-    {variants.map((item, i) => (
-      <button
-        key={i}
-        onClick={() => setSelected(item)}
-        className={`${styles.variantBtn} ${
-          selected.name === item.name ? styles.activeVariant : ""
-        }`}
-      >
-        {item.name}
-      </button>
-    ))}
-  </div>
-</div>
+          <button className={styles.cartBtn}>ADD TO CART</button>
 
-
-          <button className={styles.cartBtn}>
-  ADD TO CART
-</button>
-
-<Link href="/catalogo" className={styles.catalogBtn}>
-  VIEW FULL CATALOG →
-</Link>
-
+          {/* IMPORTANTE: El Link también debe llevar el prefijo del repositorio */}
+          <Link href={`${prefix}/catalogo`} className={styles.catalogBtn}>
+            VIEW FULL CATALOG →
+          </Link>
         </div>
 
       </div>
@@ -107,13 +101,11 @@ export default function Products() {
             tranquility and refined aesthetic.
           </p>
         </div>
-
         <div>
           <h3>REVIEWS</h3>
           <p>No reviews yet.</p>
         </div>
       </div>
-
     </section>
   )
 }

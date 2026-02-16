@@ -1,8 +1,13 @@
+"use client"
+
 import styles from "./History.module.css"
 import Image from "next/image"
 import { FaGem, FaHandsHelping, FaLeaf } from "react-icons/fa"
 
 export default function History() {
+  // Definimos el prefijo para las rutas de GitHub Pages
+  const prefix = process.env.NODE_ENV === 'production' ? '/larimar' : '';
+
   return (
     <section className={styles.history}>
 
@@ -27,10 +32,11 @@ export default function History() {
 
         <div className={styles.storyImage}>
           <Image
-            src="/team/work.jpg"
+            src={`${prefix}/team/work.jpg`}
             alt="Workshop"
             fill
             style={{ objectFit: "cover" }}
+            unoptimized // Necesario para evitar errores de optimización en exportación estática
           />
         </div>
       </div>
@@ -64,16 +70,14 @@ export default function History() {
 
           <div className={styles.member}>
             <div className={styles.memberImage}>
-              <div className={styles.memberImage}>
-  <Image
-    src="/team/team1.jpg"
-    alt="Designer"
-    width={500}
-    height={600}
-    className={styles.image}
-  />
-</div>
-
+              <Image
+                src={`${prefix}/team/team1.jpg`}
+                alt="Designer"
+                width={500}
+                height={600}
+                className={styles.image}
+                unoptimized
+              />
             </div>
             <h5>Isabella Cruz</h5>
             <span>Creative Director</span>
@@ -81,15 +85,14 @@ export default function History() {
 
           <div className={styles.member}>
             <div className={styles.memberImage}>
-<div className={styles.memberImage}>
-  <Image
-    src="/team/team2.jpg"
-    alt="Designer"
-    width={500}
-    height={600}
-    className={styles.image}
-  />
-</div>
+              <Image
+                src={`${prefix}/team/team2.jpg`}
+                alt="Master Artisan"
+                width={500}
+                height={600}
+                className={styles.image}
+                unoptimized
+              />
             </div>
             <h5>Mateo Alvarez</h5>
             <span>Master Artisan</span>
@@ -97,15 +100,14 @@ export default function History() {
 
           <div className={styles.member}>
             <div className={styles.memberImage}>
-<div className={styles.memberImage}>
-  <Image
-    src="/team/team3.jpg"
-    alt="Designer"
-    width={500}
-    height={600}
-    className={styles.image}
-  />
-</div>
+              <Image
+                src={`${prefix}/team/team3.jpg`}
+                alt="Gem Specialist"
+                width={500}
+                height={600}
+                className={styles.image}
+                unoptimized
+              />
             </div>
             <h5>Sofia Martinez</h5>
             <span>Gem Specialist</span>

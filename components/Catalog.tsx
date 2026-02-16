@@ -3,12 +3,13 @@
 import styles from "@/components/Catalog.module.css"
 
 export default function Catalogo() {
+    const prefix = process.env.NODE_ENV === 'production' ? '/larimar' : '';
 
   const products = [
-    { id: 1, name: "Ocean Ring", price: 180, image: "/products/larimar1.jpg" },
-    { id: 2, name: "Ocean Necklace", price: 390, image: "/products/larimar2.jpg" },
-    { id: 3, name: "Ocean Bracelet", price: 240, image: "/products/larimar3.jpg" },
-    { id: 4, name: "Luxury Pendant", price: 320, image: "/products/larimar4.jpg" },
+    { id: 1, name: "Ocean Ring", price: 180, image: `${prefix}/products/larimar1.jpg` },
+    { id: 2, name: "Ocean Necklace", price: 390, image: `${prefix}/products/larimar2.jpg` },
+    { id: 3, name: "Ocean Bracelet", price: 240, image: `${prefix}/products/larimar3.jpg` },
+    { id: 4, name: "Luxury Pendant", price: 320, image: `${prefix}/products/larimar4.jpg` },
   ]
 
   return (
