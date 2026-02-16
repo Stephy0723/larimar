@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[48949,["/larimar/_next/static/chunks/2a654b30faf8fc78.js","/larimar/_next/static/chunks/032e0eb1480fc542.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"buildId":"RH8ucAq8l-VZmEAb1pxWL","rsc":["$","$1","c",{"children":[["$","div",null,{"style":{"padding":"3rem"},"children":[["$","h1",null,{"style":{"fontSize":"2rem","marginBottom":"1rem"},"children":"Colección"}],["$","p",null,{"children":"Próximamente añadiremos los productos de Larimar aquí."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+4:null
