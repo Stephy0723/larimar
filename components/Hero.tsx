@@ -4,10 +4,13 @@ import { motion } from "framer-motion"
 import styles from "./Hero.module.css"
 
 export default function Hero() {
+  // Definimos el prefijo del repositorio
+  const REPO_NAME = "/larimar";
+
   return (
     <section className={styles.hero}>
 
-      {/* Video Fondo */}
+      {/* Video Fondo - Ruta corregida */}
       <video
         className={styles.video}
         autoPlay
@@ -15,7 +18,7 @@ export default function Hero() {
         muted
         playsInline
       >
-        <source src="/beach.mp4" type="video/mp4" />
+        <source src={`${REPO_NAME}/beach.mp4`} type="video/mp4" />
       </video>
 
       {/* Overlay degradado */}

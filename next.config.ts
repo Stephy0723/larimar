@@ -1,13 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  output: 'export', // Necesario para generar archivos estáticos que GitHub pueda leer
+  output: 'export', 
+  // Si estamos en producción, usamos el nombre del repo. Si es local, no usamos nada.
+  basePath: isProd ? '/larimar' : '',
+  assetPrefix: isProd ? '/larimar/' : '',
   images: {
-    unoptimized: true, // GitHub Pages no soporta el optimizador de imágenes nativo de Next.js
+    unoptimized: true,
   },
-  // Reemplaza 'nombre-de-tu-repo' por el nombre exacto en GitHub (ej. 'larimar-store')
-  basePath: '/larimar', // Nombre exacto de tu repositorio
-  assetPrefix: '/larimar',
 };
 
 export default nextConfig;
