@@ -1,0 +1,107 @@
+.footer {
+  background: #f9fcfd;
+  padding: 6rem 8% 3rem 8%;
+  border-top: 1px solid #eaeff2;
+}
+
+/* TOP GRID */
+.top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+/* BRAND */
+.brand h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.4em;
+  font-weight: 300;
+  color: #1F4F63;
+}
+
+.brand p {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5A6B75;
+}
+
+/* LINKS */
+.links h4,
+.newsletter h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: #1F4F63;
+}
+
+.links a {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
+  color: #5A6B75;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.links a:hover {
+  color: #1F4F63;
+}
+
+/* NEWSLETTER */
+.newsletter p {
+  font-size: 0.85rem;
+  color: #5A6B75;
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.inputGroup input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.inputGroup button {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.inputGroup button:hover {
+  transform: translateX(3px);
+}
+
+/* BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eaeff2;
+  padding-top: 2rem;
+  font-size: 0.8rem;
+  color: #5A6B75;
+}
+
+.socials a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #5A6B75;
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  color: #1F4F63;
+}

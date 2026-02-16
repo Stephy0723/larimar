@@ -1,0 +1,174 @@
+.contact {
+  position: relative;
+  padding: 10rem 8%;
+  background: radial-gradient(
+    circle at 20% 30%,
+    #1F4F63 0%,
+    #0F2E3A 40%,
+    #071C23 100%
+  );
+  overflow: hidden;
+  color: white;
+}
+.right {
+  padding: 4rem;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  transform: translateY(40px);
+}
+.right h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 2.5rem;
+}
+
+/* Luz suave tipo piedra */
+.contact::before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(126, 200, 227, 0.15),
+    transparent 70%
+  );
+  top: -200px;
+  right: -200px;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* Panel flotante */
+.container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+/* Tipografía más editorial */
+.title {
+  font-size: 3.2rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.smallTitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  color: rgba(255,255,255,0.6);
+}
+
+.info p {
+  color: #7EC8E3;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+}
+
+.info span {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Formulario refinado */
+.form input,
+.form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding: 0.8rem 0;
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #7EC8E3;
+}
+
+.form button {
+  margin-top: 2.5rem;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #7EC8E3,
+    #1F4F63
+  );
+  border: none;
+  color: white;
+  letter-spacing: 0.35em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+.description {
+  margin-top: 1.5rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  max-width: 400px;
+}
+
+/* Redes sociales */
+
+.socials {
+  margin-top: 3rem;
+}
+
+.socials span {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 2rem;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: white;
+}
+
+.socialIcons a:hover::after {
+  width: 100%;
+}

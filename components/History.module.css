@@ -1,0 +1,145 @@
+.history {
+  padding: 10rem 8%;
+  background: linear-gradient(
+    to bottom,
+    var(--background-light),
+    var(--white)
+  );
+}
+
+/* HEADER */
+
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.smallTitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  color: var(--accent-gold);
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  margin-top: 1rem;
+  color: var(--primary-dark);
+}
+
+.line {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-gold),
+    transparent
+  );
+  margin: 1.5rem auto 0;
+}
+
+/* STORY SECTION */
+
+.storySection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-bottom: 8rem;
+}
+
+.storyText h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.storyText p {
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.storyImage {
+  position: relative;
+  height: 400px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* VALUES */
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 8rem;
+}
+
+.valueCard {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.4s ease;
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.valueCard h4 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.15em;
+}
+
+.valueCard p {
+  color: var(--text-muted);
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+/* TEAM */
+
+.team {
+  text-align: center;
+}
+
+.team h3 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.member {
+  transition: all 0.4s ease;
+}
+
+.memberImage {
+  position: relative;
+  height: 350px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.member h5 {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+}
+
+.member span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.member:hover {
+  transform: translateY(-8px);
+}

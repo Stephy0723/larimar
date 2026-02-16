@@ -1,0 +1,61 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+    to bottom,
+    rgba(8,18,24,0.6),
+    rgba(8,18,24,0.2),
+    transparent
+  );
+}
+
+.logo {
+  font-size: 0.9rem;
+  letter-spacing: 0.5em;
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+}
+
+.menu {
+  display: flex;
+  gap: 3.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  font-weight: 300;
+}
+
+.menu a {
+  position: relative;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Línea animada elegante */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1px;
+  background: rgba(255,255,255,0.8);
+  transition: width 0.5s ease;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}

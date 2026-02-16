@@ -1,0 +1,77 @@
+.hero {
+  position: relative;
+  width: 130%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180vh;   /* más grande */
+  height: 180vw;  /* invertido */
+  transform: translate(-50%, -50%) rotate(-90deg);
+  object-fit: cover;
+}
+
+
+.content {
+  position: absolute;
+  z-index: 2;
+
+  top: 50%;
+  left: 8%;
+
+  transform: translateY(-55%);
+  max-width: 720px;
+}
+
+
+/* Título refinado */
+.title {
+  font-size: clamp(4rem, 6vw, 6.5rem);
+  font-weight: 300;
+  color: #ffffff;
+
+  line-height: 1.05;
+  letter-spacing: 0.06em;
+
+  text-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* Subtítulo más elegante */
+.subtitle {
+  margin-top: 2rem;
+
+  font-size: 1.05rem;
+  color: rgba(207,239,247,0.85);
+
+  letter-spacing: 0.05em;
+  max-width: 480px;
+}
+/* Botón más premium */
+.button {
+  margin-top: 3rem;
+
+  padding: 1.1rem 3rem;
+
+  border: 1px solid rgba(126,200,227,0.8);
+  color: #7EC8E3;
+
+  background: transparent;
+
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.65rem;
+
+  transition: all 0.4s ease;
+}
+
+.button:hover {
+  background: #7EC8E3;
+  color: #0F1C22;
+}
