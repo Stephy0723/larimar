@@ -1,174 +1,431 @@
-.contact {
-  position: relative;
-  padding: 10rem 8%;
-  background: radial-gradient(
-    circle at 20% 30%,
-    #1F4F63 0%,
-    #0F2E3A 40%,
-    #071C23 100%
-  );
-  overflow: hidden;
+/* WRAPPER */
+.wrapper {
+  min-height: 100vh;
+  background: white;
+}
+
+/* HERO MINIMALISTA */
+.hero {
+  padding: 10rem 8% 4rem;
+  background: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.heroLine {
+  width: 80px;
+  height: 2px;
+  background: #bfa14a;
+  margin: 2rem auto;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #666;
+}
+
+/* CONTAINER */
+.container {
+  padding: 4rem 8% 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* CONTACT METHODS GRID */
+.contactMethods {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.methodCard {
+  background: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border: 1px solid #f0f0f0;
+}
+
+.methodCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-color: #bfa14a;
+}
+
+.iconCircle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.iconCircle svg {
+  width: 28px;
+  height: 28px;
+  color: #666;
+  transition: color 0.4s ease;
+}
+
+.methodCard:hover .iconCircle {
+  background: linear-gradient(135deg, #bfa14a 0%, #a08840 100%);
+  transform: scale(1.1);
+}
+
+.methodCard:hover .iconCircle svg {
   color: white;
 }
-.right {
-  padding: 4rem;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
-  transform: translateY(40px);
-}
-.right h3 {
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  margin-bottom: 2.5rem;
+
+.methodCard h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
 }
 
-/* Luz suave tipo piedra */
-.contact::before {
-  content: "";
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(
-    circle,
-    rgba(126, 200, 227, 0.15),
-    transparent 70%
-  );
-  top: -200px;
-  right: -200px;
-  filter: blur(80px);
-  pointer-events: none;
+.methodCard p {
+  color: #666;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
 }
 
-/* Panel flotante */
-.container {
-  position: relative;
-  max-width: 1100px;
+.responseTime {
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: 0.05em;
+}
+
+/* WHATSAPP CARD - DESTACADO */
+.whatsappCard .iconCircle {
+  background: linear-gradient(135deg, #25D366 0%, #1ea952 100%);
+}
+
+.whatsappCard .iconCircle svg {
+  color: white;
+}
+
+.whatsappCard:hover .iconCircle {
+  background: linear-gradient(135deg, #1ea952 0%, #128c40 100%);
+}
+
+.whatsappBtn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.8rem;
+  background: #25D366;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.whatsappCard:hover .whatsappBtn {
+  background: #1ea952;
+  transform: scale(1.05);
+}
+
+/* BUSINESS SECTION */
+.businessSection {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.businessSection h2 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+}
+
+.businessGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 6px;
+}
+
+.businessCard {
+  background: white;
+  padding: 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+  border-top: 3px solid #bfa14a;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.businessCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.businessIconSvg {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.businessIconSvg svg {
+  width: 26px;
+  height: 26px;
+  color: #bfa14a;
+}
+
+.businessCard h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: 0.03em;
+}
+
+.businessCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.businessCard li {
+  padding: 0.8rem 0;
+  padding-left: 1.8rem;
+  color: #555;
+  position: relative;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 0.95rem;
+}
+
+.businessCard li:last-child {
+  border-bottom: none;
+}
+
+.businessCard li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #bfa14a;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* FORM + MAP SECTION */
+.formMapSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 3rem;
+  margin-bottom: 6rem;
 }
 
-/* Tipografía más editorial */
-.title {
-  font-size: 3.2rem;
+/* FORM SECTION */
+.formSection {
+  background: white;
+  padding: 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.formSection h2 {
+  font-size: 2rem;
   font-weight: 300;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
 }
 
-.smallTitle {
-  font-size: 0.8rem;
-  letter-spacing: 0.35em;
-  color: rgba(255,255,255,0.6);
+.form {
+  width: 100%;
 }
 
-.info p {
-  color: #7EC8E3;
-  letter-spacing: 0.3em;
-  font-size: 0.75rem;
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
-.info span {
-  color: rgba(255,255,255,0.8);
-}
-
-/* Formulario refinado */
 .form input,
+.form select,
 .form textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  padding: 0.8rem 0;
-  color: white;
-  font-size: 0.9rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
+  font-family: inherit;
+  background: white;
 }
 
 .form input:focus,
+.form select:focus,
 .form textarea:focus {
-  border-color: #7EC8E3;
+  outline: none;
+  border-color: #bfa14a;
 }
 
-.form button {
-  margin-top: 2.5rem;
-  padding: 1.2rem 2rem;
-  background: linear-gradient(
-    135deg,
-    #7EC8E3,
-    #1F4F63
-  );
-  border: none;
+.form textarea {
+  resize: vertical;
+  margin-bottom: 1.2rem;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1.2rem;
+  background: #bfa14a;
   color: white;
-  letter-spacing: 0.35em;
-  font-size: 0.8rem;
+  border: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
   cursor: pointer;
   transition: all 0.4s ease;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 16px rgba(191, 161, 74, 0.2);
 }
 
-.form button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+.submitBtn:hover {
+  background: #a08840;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(191, 161, 74, 0.3);
 }
 
-.description {
-  margin-top: 1.5rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.7);
-  max-width: 400px;
+/* MAP SECTION */
+.mapSection {
+  background: #f5f5f5;
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
 }
 
-/* Redes sociales */
-
-.socials {
-  margin-top: 3rem;
+/* SOCIAL SECTION */
+.socialSection {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-top: 1px solid #f0f0f0;
 }
 
-.socials span {
-  font-size: 0.75rem;
-  letter-spacing: 0.35em;
-  color: var(--accent-gold);
-  display: block;
-  margin-bottom: 1rem;
+.socialSection h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
 }
 
-.socialIcons {
+.socialLinks {
   display: flex;
+  justify-content: center;
   gap: 2rem;
 }
 
-.socialIcons a {
+.socialLink {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
   text-decoration: none;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  position: relative;
-  transition: all 0.3s ease;
 }
 
-.socialIcons a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 1px;
-  background: var(--accent-gold);
-  transition: width 0.3s ease;
+.socialLink svg {
+  width: 24px;
+  height: 24px;
+  color: #666;
+  transition: color 0.4s ease;
 }
 
-.socialIcons a:hover {
+.socialLink:hover {
+  background: linear-gradient(135deg, #bfa14a 0%, #a08840 100%);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(191, 161, 74, 0.3);
+}
+
+.socialLink:hover svg {
   color: white;
 }
 
-.socialIcons a:hover::after {
-  width: 100%;
+/* RESPONSIVE */
+@media (max-width: 968px) {
+  .contactMethods {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .businessGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formMapSection {
+    grid-template-columns: 1fr;
+  }
+
+  .mapSection {
+    min-height: 400px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .socialLinks {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contactMethods {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 3rem 5%;
+  }
+
+  .hero {
+    padding: 8rem 5% 3rem;
+  }
+
+  .formSection,
+  .businessCard {
+    padding: 2rem;
+  }
 }

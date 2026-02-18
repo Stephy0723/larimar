@@ -1,13 +1,5 @@
-import Navbar from "@/components/Navbar"
-import Catalog from "@/components/Catalog"
-import Footer from "@/components/Footer"
+import Catalogo from "@/components/Catalog"
 
-export default function CatalogPage() {
-  return (
-    <>
-      <Navbar />
-      <Catalog />
-      <Footer />
-    </>
-  )
+export default function CatalogoPage() {
+  return <Catalogo />
 }

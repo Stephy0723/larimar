@@ -1,0 +1,340 @@
+/* WRAPPER */
+.wrapper {
+    min-height: 100vh;
+    padding: 8rem 8% 4rem;
+    background: white;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 0.3em;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+/* CHECKOUT LAYOUT */
+.checkoutLayout {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* ORDER SUMMARY */
+.orderSummary {
+    background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+    padding: 2.5rem;
+    position: sticky;
+    top: 100px;
+}
+
+.orderSummary h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.summaryItem {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.summaryItem img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    background: white;
+}
+
+.summaryInfo h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.summaryInfo p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.deliveryInfo {
+    font-weight: 500 !important;
+    color: #1a1a1a !important;
+}
+
+.redText {
+    color: #e23d28 !important;
+    font-weight: 600;
+}
+
+.address {
+    font-size: 0.85rem !important;
+    font-style: italic;
+    color: #999 !important;
+}
+
+.summaryPrice {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.summaryTotal {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #bfa14a;
+}
+
+.timeNotice {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    background: #fff3f3;
+    border: 2px solid #e23d28;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* CHECKOUT FORM */
+.checkoutForm {
+    background: white;
+}
+
+.formSection {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.formSection:last-of-type {
+    border-bottom: none;
+}
+
+.formSection h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid #e5e5e5;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #bfa14a;
+    background: #fffbf5;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* PAYMENT METHODS */
+.paymentMethods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.paymentOption {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 2px solid #e5e5e5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.paymentOption:hover {
+    border-color: #bfa14a;
+    background: #fffbf5;
+}
+
+.paymentOption.active {
+    border-color: #bfa14a;
+    background: linear-gradient(135deg, #fffbf5 0%, #fef8ed 100%);
+    box-shadow: 0 4px 12px rgba(191, 161, 74, 0.15);
+}
+
+.radio {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.3s;
+}
+
+.paymentOption.active .radio {
+    border-color: #bfa14a;
+}
+
+.radioDot {
+    width: 12px;
+    height: 12px;
+    background: #bfa14a;
+    border-radius: 50%;
+}
+
+.paymentOption span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cardForm {
+    overflow: hidden;
+}
+
+.paypalNotice {
+    background: #fffbf5;
+    padding: 1.5rem;
+    border: 2px solid #bfa14a;
+    overflow: hidden;
+}
+
+.paypalNotice p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* SUBMIT BUTTON */
+.submitBtn {
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #bfa14a 0%, #a08840 100%);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #a08840 0%, #8f7738 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(191, 161, 74, 0.4);
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* PROCESSING OVERLAY */
+.processingOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.processingCard {
+    background: white;
+    padding: 4rem 3rem;
+    text-align: center;
+    max-width: 400px;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #f0f0f0;
+    border-top: 4px solid #bfa14a;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.processingCard h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.processingCard p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .checkoutLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .orderSummary {
+        position: static;
+        order: 2;
+    }
+
+    .checkoutForm {
+        order: 1;
+    }
+
+    .paymentMethods,
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+}

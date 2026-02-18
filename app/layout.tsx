@@ -3,6 +3,8 @@ import { Playfair_Display } from "next/font/google"
 import "./globals.css"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import { CartProvider } from "@/context/CartContext"
+import { LanguageProvider } from "@/context/LanguageContext"
 
 const playfair = Playfair_Display({ subsets: ["latin"] })
 
@@ -19,9 +21,13 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={playfair.className} style={{ margin: 0, padding: 0 }}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <CartProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </CartProvider>
+        </LanguageProvider>
       </body>
     </html>
   )

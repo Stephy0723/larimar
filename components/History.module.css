@@ -1,145 +1,487 @@
-.history {
-  padding: 10rem 8%;
-  background: linear-gradient(
-    to bottom,
-    var(--background-light),
-    var(--white)
-  );
+/* WRAPPER */
+.wrapper {
+  min-height: 100vh;
+  background: white;
 }
 
-/* HEADER */
-
-.header {
+/* HERO */
+.hero {
+  padding: 10rem 8% 4rem;
+  background: white;
   text-align: center;
-  margin-bottom: 6rem;
 }
 
-.smallTitle {
-  font-size: 0.8rem;
-  letter-spacing: 0.4em;
-  color: var(--accent-gold);
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
 }
 
-.title {
-  font-size: 3.2rem;
+.heroLine {
+  width: 80px;
+  height: 2px;
+  background: #bfa14a;
+  margin: 2rem auto;
+}
+
+.hero p {
+  font-size: 1.1rem;
   font-weight: 300;
-  letter-spacing: 0.2em;
-  margin-top: 1rem;
-  color: var(--primary-dark);
+  letter-spacing: 0.05em;
+  color: #666;
 }
 
-.line {
-  width: 120px;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--accent-gold),
-    transparent
-  );
-  margin: 1.5rem auto 0;
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8% 6rem;
 }
 
-/* STORY SECTION */
+/* SECTION LABELS */
+.sectionLabel {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #bfa14a;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
 
-.storySection {
+/* INTRO SECTION */
+.introSection {
+  text-align: center;
+  padding: 4rem 0 6rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.introSection h2 {
+  font-size: 2.8rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.leadText {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #555;
+  font-weight: 300;
+}
+
+/* DISCOVERY SECTION */
+.discoverySection {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
+  align-items: center;
   margin-bottom: 8rem;
 }
 
-.storyText h3 {
-  font-size: 1.8rem;
+.discoveryText h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+}
+
+.discoveryText p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #666;
   margin-bottom: 1.5rem;
 }
 
-.storyText p {
-  line-height: 1.8;
-  color: var(--text-muted);
-}
-
-.storyImage {
-  position: relative;
-  height: 400px;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-/* VALUES */
-
-.values {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  margin-bottom: 8rem;
-}
-
-.valueCard {
-  flex: 1;
-  text-align: center;
-  padding: 2rem;
-  transition: all 0.4s ease;
-}
-
-.icon {
-  font-size: 2rem;
-  color: var(--accent-gold);
-  margin-bottom: 1rem;
-}
-
-.valueCard h4 {
-  margin-bottom: 1rem;
-  letter-spacing: 0.15em;
-}
-
-.valueCard p {
-  color: var(--text-muted);
-}
-
-.valueCard:hover {
-  transform: translateY(-5px);
-}
-
-/* TEAM */
-
-.team {
-  text-align: center;
-}
-
-.team h3 {
-  font-size: 2rem;
-  margin-bottom: 4rem;
-}
-
-.teamGrid {
+.statsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-.member {
-  transition: all 0.4s ease;
+.stat {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+  border-top: 3px solid #bfa14a;
 }
 
-.memberImage {
+.statNumber {
+  font-size: 3rem;
+  font-weight: 200;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.discoveryImage {
+  height: 500px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 350px;
-  border-radius: 6px;
   overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 120px;
+  height: 120px;
+  color: #bfa14a;
+  opacity: 0.3;
+}
+
+.imagePlaceholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* PROCESS SECTION */
+.processSection {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.processSection h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  color: #1a1a1a;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.processStep {
+  text-align: left;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.processStep:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.stepNumber {
+  font-size: 3rem;
+  font-weight: 200;
+  color: #bfa14a;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.processStep h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.processStep p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* CRAFTSMANSHIP SECTION */
+.craftsmanshipSection {
+  margin-bottom: 8rem;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.twoColumns h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.twoColumns p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #666;
   margin-bottom: 1.5rem;
 }
 
-.member h5 {
-  font-size: 1rem;
-  letter-spacing: 0.15em;
+.quote {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+  border-left: 4px solid #bfa14a;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: #333;
 }
 
-.member span {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+.quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #999;
 }
 
-.member:hover {
-  transform: translateY(-8px);
+.craftFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #bfa14a 0%, #a08840 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featureIcon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.feature h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* SUSTAINABILITY SECTION */
+.sustainabilitySection {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.sustainabilitySection h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  color: #1a1a1a;
+}
+
+.sustainabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.sustainabilityCard {
+  padding: 3rem 2rem;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-top: 3px solid #1F4F63;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.sustainabilityCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.sustainabilityCard h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.sustainabilityCard p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* TIMELINE SECTION */
+.timelineSection {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.timelineSection h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  color: #1a1a1a;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #bfa14a 0%, #f0f0f0 100%);
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.timelineItem:nth-child(even) {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+  direction: ltr;
+  text-align: right;
+}
+
+.timelineYear {
+  font-size: 3rem;
+  font-weight: 200;
+  color: #bfa14a;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.timelineItem:nth-child(even) .timelineYear {
+  text-align: left;
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+.timelineContent {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+.timelineContent h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.timelineContent p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+
+  .discoverySection,
+  .twoColumns {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sustainabilityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timelineItem,
+  .timelineItem:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .timelineYear {
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 0;
+  }
+
+  .timelineContent {
+    padding-left: 60px;
+    text-align: left;
+  }
+
+  .timelineItem:nth-child(even) .timelineYear,
+  .timelineItem:nth-child(even) .timelineContent {
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .introSection h2,
+  .discoveryText h2,
+  .processSection h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 5% 4rem;
+  }
 }
